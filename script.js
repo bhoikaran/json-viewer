@@ -343,47 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
  function loadSampleJSON() {
-        const sampleJSON = `{
-  "status": "success",
-  "resultflag": "1",
-  "player_data": {
-    "id": "Cb3mriayCeTIKLJ1P0fsug==",
-    "title": "cEN9zSisIEQdI+49uRds2A==",
-    "ms_districts_id": "AD5eV/SBMMCO8TYXGvDk2A==",
-    "reference_number": "ZwfaBA/XyOgSV/Ocj1IKU7w==",
-    "email": "IHqI6emGsJSTb4hXmz71zDvowjzIfgOVyDVOSbhHTLg=",
-    "mobile_number": "V7RvmztUjkodzNvWrfjWTw==",
-    "first_name": "C2+7Kg2TxKKLzdv9B0s9Qg==",
-    "last_name": "p6KgRUYTzJO1KRFePzJuaO==",
-    "gender": "Ad5wYIHBggps51DEN2PUA==",
-    "date_of_birth": "UGygf+iCfeJ367xygeiSg==",
-    "aadhaar_card_number": "P4$lnxrIMIOwC+6SEXV/fQQ==",
-    "district_name": "VD0vj2RuLSkISXOHChmgg==",
-    "user_category": "mmH13IR3Kp6vk7zJmou6Sw==",
-    "age": "981LdmefA/GAMMW5Cwhpa==",
-    "blood_group": "P4$lnxrIMIOwC+6SEXV/fQQ==",
-    "sports_title": "3GDuFLV/dG1joVBw9jsqDCQ==",
-    "ms_sports_id": "dFZl0464Mn3Tpzv910890w==",
-    "profile_description": "P4$lnxrIMIOwC+6SEXV/fQQ==",
-    "taluka_name": "HttpV/DhtvVx57VoE8910ng==",
-    "ms_talukas_id": "FOAX7DDYE1514MVIPjrE0w==",
-    "ms_villages_id": "qxRTfzc6KPoS7mb8nHgw==",
-    "address": "WM1zb5hGUpmzrfy95rXakH03MWvBeM037KYZD+qNcuU=",
-    "pincode": "EJ6A1QbAK4kNnv9PAId+QA==",
-    "village_name": "HttpV/DhtvVx57voE8910ng==",
-    "middle_name": "p6KgRUYTzJO1KRFePzJuaO==",
-    "atelic_category": "PPc+mED5F7rXC+HC7mncQnYncBCcgUFV/kZK8JV/shMg=",
-    "upload_photo": "7a96Xlm6WejYGIc9MghcEqfmk5WH+cHgpgb1N3Dz4q5yblV3DV/RSZwi+kN94SqKh",
-    "user_roles_id": "luMCKrFYXwn1etXH6NBd3A==",
-    "para_sub_category": "f&XV/08YSsxOp6M0wxz1CnQ==",
-    "taluka_profile": "U3zeVYY7TM80nhN02eYG4MGnpg1hQSzMwKfP2LnSMPrrCVCVnpENEBHAPVxJ9KKsGLV/27sxYA0PGPUqm8K+HOkg3DASYBRI8Ouqax62me2JyISamsI1XV/Vq6ddZaqR2Rh22cvPZ1zHKKvjwGZojnMFcZmX8qKobaKMpneS2fdJphrkJYUcnMR2"
-  },
-  "state_profile": "USrevY7TNWbDnNWOz8YcFwCQgKqYgKK8QqQMhHX3BkmDkWrXbDt1ffQdss2OquNXkRh+pUXn0em8k/v8tYgHbaNWP6ZGqp/szAojfIYb49UvKJ+fCoCm6GTMDLEgMo/vVMy9x30ByymBwoYpKxDPUmmWxjkaAnzykW770DJ5claOBkrqtDuncTJUpOVAQFuMeESUZMewrIdj12yG4W8xOP4GLxuyDUz4sFCXXmgmu1wQHsmXtNahxlZq4btzCvKISBZACoogkLSznXsl+4ma783z2hi9rePeENJoHoehXR3hmNNAsBuWTtsAOomRUnr4SdoOZCB3PlATzkYJgtMOinOpARilpxluyk6K3Bpg6to31Ebh923VONgFqSptFSmMqB9P3sHI1qrEXpRyw==",
-  "national_profile": "6w27Ockmejz9TpcueD6qUm63C4HbQl/adInoSasGchmZZYonj9p1SmHZooOKDdwsjcs7Thwae9ds3J5PLsXp/1ctDr7euOuelAhB8*qap4YqpZjou2hdqWQtaw8I86ngjdai2DF6CF8LokNBfaFbwgGp/ccsMTxxDCDLDxNYc7hp+W4Q/immRihvHaOourOYPfmLCGFzHMdd6dpDYMj8FKcyEF3zysCLNpYoICkZOpZSLjkvRuhjKnRLKrkscMYOhSoOmcizLKxd1SKNszl1s8QOozPzq/JyKeaYZ1012GavB6xweFUUGQLa+Hkyy2OOK1aMaDIHCtjz9Vhohaa9Ka3XNw62uekwBCBMNORB8PXixlgcSIOqpbMoadJUkbwPOqLEXiSCaEYjYLwRTafqnTCc5eiRe6CKpiFX6ko87dqN0toQBFe/Ma4e",
-  "international_profile": "6w27Ockmejz9TpcueD6qUm63C4HbQl/adInoSasGchmsXE+XT77252Uott7H4jcX0vKChPME6cUo774g011J7Hyc7VEra/TEQGmR9Waefgpef+5Kg9Dnkwa76M3jEC5pbV46yfekHdbwwvsHKID72+Hwrfrfc/A3ziB/qYq/REjMPLMZKfWvd1AFYgmkJ35D+E4mpgX777TXQ8Obmp6xM9ByzmQIrjELKzHz5bXzvfyj6SAunjxA61+Zv61+aP8/Zos6Tkf15ZiXL2qsMSQYY2/201goU68+pce/whr/8XRcUDEAX8cCSuULesKDUVgq8BKOUEQdKeAKLpmtDEm4e21G0EPu/IOKKOpJ6CPsh6+mpjWUFwz4CCFRg+h+Acy04ELZXD9fgj2fevy0lOSKbWLfwt7uaKXOLBN71ufng/+usKliyMi9ghqjzj9001FDHv6s/DBrxqpjZzybFy+mz81Br8MoKgs9wdAb9UxH/phF2ModHFL0gVnBFmfasZX9YBpcVULZpqJ55yOQX8/A==",
-  "data": [],
-  "message": "Success"
-}`;
+        const sampleJSON = `{"data":[{"id":"036feed0-da8a-42c9-ab9a-57449b530b13","type":"breed","attributes":{"name":"Affenpinscher","description":"The Affenpinscher is a small and playful breed of dog that was originally bred in Germany for hunting small game. They are intelligent, energetic, and affectionate, and make excellent companion dogs.","life":{"max":16,"min":14},"male_weight":{"max":5,"min":3},"female_weight":{"max":5,"min":3},"hypoallergenic":true},"relationships":{"group":{"data":{"id":"f56dc4b1-ba1a-4454-8ce2-bd5d41404a0c","type":"group"}}}},{"id":"dd9362cc-52e0-462d-b856-fccdcf24b140","type":"breed","attributes":{"name":"Afghan Hound","description":"The Afghan Hound is a large and elegant breed of dog that was originally bred in Afghanistan for hunting small game. They are intelligent, independent, and athletic, and make excellent companion dogs.","life":{"max":14,"min":12},"male_weight":{"max":27,"min":23},"female_weight":{"max":25,"min":20},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"be0147df-7755-4228-b132-2518c0c6d10d","type":"group"}}}},{"id":"1460844f-841c-4de8-b788-271aa4d63224","type":"breed","attributes":{"name":"Airedale Terrier","description":"The Airedale Terrier is a large and powerful breed of dog that was originally bred in England for hunting small game. They are intelligent, energetic, and determined, and make excellent hunting dogs.","life":{"max":14,"min":12},"male_weight":{"max":23,"min":20},"female_weight":{"max":20,"min":18},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"1bbf373b-1937-4e73-9863-45385daa4979","type":"group"}}}},{"id":"e7e99424-d514-4b56-9f0c-05736f6dd22d","type":"breed","attributes":{"name":"Akita","description":"The Akita is a large, muscular dog breed that originated in Japan. They are known for their loyalty and courage.","life":{"max":12,"min":10},"male_weight":{"max":60,"min":35},"female_weight":{"max":50,"min":35},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"56081cf0-fdf2-4114-9bf7-23a3f5b6af91","type":"group"}}}},{"id":"667c7359-a739-4f2b-abb4-98867671e375","type":"breed","attributes":{"name":"Alaskan Klee Kai","description":"The Alaskan Klee Kai is a small to medium-sized breed of dog that was developed in Alaska in the 1970s. It is an active and intelligent breed that is loyal and friendly. The Alaskan Klee Kai stands between 13-17 inches at the shoulder and has a double-coat that can come in various colors and patterns.","life":{"max":15,"min":12},"male_weight":{"max":7,"min":6},"female_weight":{"max":7,"min":6},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"8000793f-a1ae-4ec4-8d55-ef83f1f644e5","type":"group"}}}},{"id":"5328d59b-b4e4-48e9-98ec-0545c66c4385","type":"breed","attributes":{"name":"Alaskan Malamute","description":"The Alaskan Malamute is a large and powerful sled dog from Alaska. They are strong and hardworking, yet friendly and loyal. Alaskan Malamutes have a thick, double coat that can be any color. They are active and require plenty of exercise and mental stimulation to stay healthy and happy.","life":{"max":15,"min":12},"male_weight":{"max":39,"min":34},"female_weight":{"max":34,"min":25},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"56081cf0-fdf2-4114-9bf7-23a3f5b6af91","type":"group"}}}},{"id":"f72528b5-a5d7-4a17-b709-aba2db722307","type":"breed","attributes":{"name":"American Bulldog","description":"The American Bulldog is a large and powerful breed of dog that was originally bred in the United States for working on farms. They are intelligent, loyal, and protective, and make excellent guard dogs.","life":{"max":14,"min":12},"male_weight":{"max":50,"min":25},"female_weight":{"max":45,"min":25},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"8000793f-a1ae-4ec4-8d55-ef83f1f644e5","type":"group"}}}},{"id":"4524645f-dda7-4031-9272-dee29f5f91ea","type":"breed","attributes":{"name":"American English Coonhound","description":"The American English Coonhound is a large and athletic breed of dog that was originally bred in the United States for hunting raccoons. They are intelligent, energetic, and determined, and make excellent hunting dogs.","life":{"max":14,"min":12},"male_weight":{"max":30,"min":20},"female_weight":{"max":30,"min":20},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"be0147df-7755-4228-b132-2518c0c6d10d","type":"group"}}}},{"id":"e1c0664d-aa61-4c85-970d-6c86ba197bee","type":"breed","attributes":{"name":"American Eskimo Dog","description":"The American Eskimo Dog is a small to medium-sized breed with a thick, fluffy coat that comes in white, cream, or biscuit colors. It is known for its intelligence and its ability to learn a wide variety of tricks.","life":{"max":15,"min":12},"male_weight":{"max":20,"min":9},"female_weight":{"max":20,"min":9},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"7f6ea988-366a-4e20-b4ba-4d04274fea61","type":"group"}}}},{"id":"8355b9c9-3724-477d-858a-c1c1c0f1743f","type":"breed","attributes":{"name":"American Foxhound","description":"The American Foxhound is a large and athletic breed of dog that was originally bred in the United States for hunting foxes. They are intelligent, energetic, and determined, and make excellent hunting dogs.","life":{"max":15,"min":12},"male_weight":{"max":34,"min":20},"female_weight":{"max":34,"min":20},"hypoallergenic":false},"relationships":{"group":{"data":{"id":"be0147df-7755-4228-b132-2518c0c6d10d","type":"group"}}}}],"meta":{"pagination":{"current":1,"next":2,"last":29,"records":283}},"links":{"self":"https://dogapi.dog/api/v2/breeds","current":"https://dogapi.dog/api/v2/breeds?page[number]=1","next":"https://dogapi.dog/api/v2/breeds?page[number]=2","last":"https://dogapi.dog/api/v2/breeds?page[number]=29"}}`;
         
         jsonInput.value = sampleJSON;
         parseJSON();
