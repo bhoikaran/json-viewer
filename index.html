@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced JSON Tree Viewer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1>JSON Tree Viewer</h1>
+        <p class="subtitle">Visualize JSON structures with automatic parsing and full screen view</p>
+      </div>
+      <div class="header-controls">
+        <select id="themeSelect" class="theme-select">
+          <option value="light">Light Theme</option>
+          <option value="dark">Dark Theme</option>
+          <option value="original-dark">Original Dark Theme</option>
+        </select>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="input-section">
+        <div class="section-card">
+          <div class="section-header">
+            <i class="fas fa-code"></i>
+            <div class="section-title">JSON Input</div>
+          </div>
+          <div class="section-body">
+            <textarea id="jsonInput" placeholder='Paste your JSON here...'></textarea>
+            
+            <div class="controls">
+              <button id="loadSampleBtn" class="btn btn-primary">
+                <i class="fas fa-file-download"></i>
+                Load Sample
+              </button>
+              <button id="clearBtn" class="btn btn-secondary">
+                <i class="fas fa-trash-alt"></i>
+                Clear
+              </button>
+              <button id="formatBtn" class="btn btn-success">
+                <i class="fas fa-indent"></i>
+                Format
+              </button>
+              <button id="validateBtn" class="btn btn-warning">
+                <i class="fas fa-check-circle"></i>
+                Validate
+              </button>
+              <input type="file" id="fileInput" accept=".json" style="display: none;">
+              <button id="uploadBtn" class="btn btn-secondary">
+                <i class="fas fa-upload"></i>
+                Upload
+              </button>
+              <button id="downloadBtn" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download
+              </button>
+            </div>
+            
+            <div id="errorMsg" class="error-message"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="output-section">
+        <div class="section-card">
+          <div class="section-header">
+            <i class="fas fa-project-diagram"></i>
+            <div class="section-title">JSON Tree</div>
+          </div>
+          <div class="section-body">
+            <div class="search-box">
+              <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+              <span id="searchInfo" class="search-info"></span>
+            </div>
+            
+            <div class="tree-controls">
+              <button id="expandAllBtn" class="btn btn-success">
+                <i class="fas fa-expand"></i>
+                Expand All
+              </button>
+              <button id="collapseAllBtn" class="btn btn-warning">
+                <i class="fas fa-compress"></i>
+                Collapse All
+              </button>
+              <button id="fullPageBtn" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Full Page View
+              </button>
+            </div>
+            
+            <div class="tree-container">
+              <ul id="treeContainer" class="tree"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Full page view modal -->
+  <div id="fullscreenModal" class="fullscreen-modal">
+    <div class="fullscreen-content">
+      <div class="fullscreen-header">
+        <div class="fullscreen-title">
+          <i class="fas fa-project-diagram"></i>
+          <span>JSON Tree - Full Page View</span>
+        </div>
+        <div class="fullscreen-controls">
+          <button id="modalExpandAllBtn" class="btn btn-success">
+            <i class="fas fa-expand"></i>
+            Expand All
+          </button>
+          <button id="modalCollapseAllBtn" class="btn btn-warning">
+            <i class="fas fa-compress"></i>
+            Collapse All
+          </button>
+          <button id="closeFullscreenBtn" class="btn btn-danger">
+            <i class="fas fa-times"></i>
+            Close Fullscreen
+          </button>
+        </div>
+      </div>
+      
+      <div class="fullscreen-tree-container">
+        <ul id="fullscreenTree" class="tree"></ul>
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
